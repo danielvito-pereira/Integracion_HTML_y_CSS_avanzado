@@ -118,7 +118,44 @@ header nav li a:hover {
   transition: color 1s;
 }
 
+.zoon-info {
+  display: inline-block;
+  position: relative;
+}
+.zoon-info *{
+  width:100%;
+  margin: 0;
+}
+/*affeter serve para adicionar elementos depois dos elementos visiveis
+*/
+.zoon-info:after {
+  content: "+";
+  color: #fff;
+  font-size:30px;
+  text-align: center;
+  font-weight: 600;
 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color:rgba(0, 0, 0, 0.6);
+
+  display: none;
+
+  cursor: pointer;
+}
+.zoon-info:hover:after{
+  display: block;
+  
+}
 main {
   padding-bottom: 30px;
   width: 80%;
@@ -144,7 +181,7 @@ main:after{
 .gallery{
   font-size: 0;
 }
-.gallery img{
+.gallery .zoon-info{
   width: 16%;
   margin: 2%;
   box-sizing: border-box;
